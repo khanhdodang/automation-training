@@ -5,26 +5,25 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.junit.Test;
 
-import java.io.File;
-
 public class GettingStarted {
     WebDriver driver;
 
     @Test
-    public void login_state_should_be_restored() {
+    public void login_successfully() {
         // https://chromedriver.chromium.org/downloads
-//        System.setProperty("webdriver.chrome.driver", "/Users/khanhdo/Documents/Kobiton/automation-training/src/main/resources/drivers/chromedriver");
+        // brew cask install chromedriver
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         driver = new ChromeDriver();
 
-        driver.get("http://www.example.com/login");
-        driver.findElement(By.id("username")).sendKeys("admin");
-        driver.findElement(By.id("password")).sendKeys("12345");
-        driver.findElement(By.id("login")).click();
+        driver.get("https://the-internet.herokuapp.com/login");
+        driver.findElement(By.id("username")).sendKeys("tomsmith");
+        driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        Assert.assertTrue(
-                driver.findElement(By.id("welcome")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("flash")).getText().contains("You logged into a secure area!"));
 
         driver.close();
+        driver.quit();
     }
 }
 
