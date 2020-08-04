@@ -1,0 +1,14 @@
+Java provides several methods to read files. Each of these methods is appropriate for reading different types of files in different situations.
+Some are better for reading longer files, others are better for reading shorter ones, etc.
+
+In this tutorial, we will be using the following Java classes to read files
+
+BufferedReader
+Files
+Scanner
+
+Throughout the tutorial, we are using a file stored in the src directory where the path to the file is src/file.txt.
+
+Store several lines of text in this file before proceeding.
+
+Note: You have to properly handle the errors when using these implementations to stick to the best coding practices.

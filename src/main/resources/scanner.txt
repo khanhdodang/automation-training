@@ -1,0 +1,7 @@
+Reading Text Files in Java with Scanner
+The Scanner class breaks the content of a file into parts using a given delimiter and reads it part by part. This approach is best suited for reading content that is separated by a delimiter.
+
+For example, the Scanner class is ideal for reading a list of integers separated by white spaces or a list of strings separated by commas.
+
+The default delimiter of the Scanner class is whitespace. But you can set the delimiter to another character or a regular expression.
+It also has various next methods, such as next(), nextInt(), nextLine(), and nextByte(), to convert content into different types.

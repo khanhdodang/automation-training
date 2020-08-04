@@ -1,0 +1,4 @@
+Reading UTF-8 Encoded File in Java with BufferedReader
+We can use the BufferedReader class to read a UTF-8 encoded file.
+
+This time, we pass an InputStreamReader object when creating a BufferedReader instance.
