@@ -29,7 +29,7 @@ public class APITest {
         driver.quit();
     }
 
-    //    @Test
+    @Test
     public void test_checkbox() {
         driver.get("https://the-internet.herokuapp.com/checkboxes");
         List<WebElement> elements = driver.findElements(By.xpath("//*[@id='checkboxes']/input"));
@@ -44,7 +44,7 @@ public class APITest {
         elements.get(1).isEnabled();
     }
 
-    //    @Test
+    @Test
     public void test_sendkeys_clear_submit() {
         driver.get("https://www.geeksforgeeks.org/");
         WebElement element = driver.findElement(By.id("gsc-i-id1"));
@@ -56,7 +56,7 @@ public class APITest {
         element.submit();
     }
 
-    //    @Test
+    @Test
     public void test_get_attributes() {
         driver.get("https://www.geeksforgeeks.org/");
         WebElement element = driver.findElement(By.linkText("Courses"));
@@ -77,7 +77,7 @@ public class APITest {
         js.executeScript("window.scrollTo(document.body.scrollHeight, 0);");
     }
 
-    //    @Test
+    @Test
     public void test_screenshot() throws IOException {
         driver.get("https://www.geeksforgeeks.org/");
 
